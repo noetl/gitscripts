@@ -69,7 +69,7 @@ def main(argv=None):
                command = "mkdir -p " + repopath
                out, err = exec_shell(add_path(workingdir,command))
                reporigin =  raw_input("Enter original git repository url:\n" + prompt)
-               command = "git clone " + reporigin
+               command = "git clone " + reporigin + " " + repopath
                out, err = exec_shell(add_path(workingdir,command))
             else:
                 repopath = raw_input("Enter local git repository path:\n" + prompt)
