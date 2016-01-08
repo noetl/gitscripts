@@ -74,7 +74,7 @@ def main(argv=None):
             else:
                 repopath = raw_input("Enter local git repository path:\n" + prompt)
             reporemote = raw_input("Enter remote git repository url in single quotes:\n" + prompt)
- 
+
         print("git repository name: ",reponame, "\ngit repository local path: ",repopath, \
               "\ngit repository remote url: ", reporemote)
         out, err = exec_shell(add_path(repopath,"git branch -a"))
