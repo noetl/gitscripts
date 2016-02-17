@@ -72,7 +72,13 @@ class Usage(Exception):
 
 def main(argv=None):
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description= """
+        Script migrates existing git repository to a new remote repository.
+        Follow the prompt's answers. It will use/create local git folder,
+        push existing git branches and tags to the new remote repository
+        and point the local git repository to the new remote repository.""",
+                usage='%(prog)s [OPTIONS]',
+                formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument("--working_dir", help="working_dir is a local folder where git repository will be created.", default="")
 
